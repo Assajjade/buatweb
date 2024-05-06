@@ -35,9 +35,17 @@ def show_Lokal(request):
 
     return render(request, "Lokal.html", context)
 
-def show_pr(request):
+def show_Pr(request):
 
     return render(request, "PR.html")
+
+def show_Primary(request):
+
+    return render(request, "Primary.html")
+
+def show_Sec(request):
+
+    return render(request, "Sec.html")
 
 
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-    <h1>HAHAHIHI.COM</h1>
+    <h1>HITUNGPERISAIRAD.ID</h1>
     </header>
          <nav>
             <a href="/">Beranda</a>
@@ -18,102 +18,176 @@
         </nav>
 
     <main class="text1">
-        <h2>Pilih yang Ingin Dihitung : </h2> 
-    <div class="PS">
-        <a href ="Primary.html" > Primary Barrier</a>
+    <h2>Pilih yang ingin dihitung : </h2> 
+    <div class="PSP">
+        <a href ="Primary.html" > Perisai Primer</a>
     </div>
-    <div class="PSS">
-        <a href="Sec.html"> Secondary Barriers</a>
+    <div class="PS">
+        <a href="Sec.html"> Perisai Sekunder</a>
     </div>
     
-    <form class="satu">    
-    Modality Type : 
-    <select>
+
+    <form class="satu" for="modaliti">    
+    Tipe Modalitas : 
+    <select id="modaliti">
         <option>Pilih</option>
-        <option value="option1">Radiograpic Room</option>
-        <option value="option2">Rad Tube</option>
-        <option value="option3">Chest Room</option>
-        <option value="option4">Flouroskopi</option>
-        <option value="option5">Rad dan Chest Bucky</option>
+        <option value="rad">Ruang Radiografi Umum (All Barier)</option>
+        <option value="radb">Ruang Radiografi Umum (Chest Bucky)</option>
+        <option value="cr">Chess Room</option>
+
     </select>
     </form>
 
-    <form class="satu">    
-        Use Factor : 
-        <select>
-            <option>Pilih</option>
-            <option value="option1">Floor</option>
-            <option value="option2">Chest Stand</option>
-            <option value="option3">Chest Room</option>
-            <option value="option4">Flouroskopi</option>
-            <option value="option5">Rad dan Chest Bucky</option>
+    <form class="satu" for="us" >    
+        Use Factor [U]: 
+        <select id="u" >
+            <option value="1">Pilih</option>
         </select>
         </form>
 
-        <form class="satu">    
-            Occupancy Type : 
-            <select>
+        <form class="satu" for="ts">    
+            Tipe Hunian [T] : 
+            <select id="t">
                 <option>Pilih</option>
-                <option value="option1">Floor</option>
-                <option value="option2">Chest Stand</option>
-                <option value="option3">Chest Room</option>
-                <option value="option4">Flouroskopi</option>
-                <option value="option5">Rad dan Chest Bucky</option>
+                <option value="1">Ruang administrasi</option>
+                <option value="1">Laboratorium</option>
+                <option value="1">Apotek</option>
+                <option value="1">Area tesepsionis</option>
+                <option value="1">Ruang tunggu</option>
+                <option value="1">Area bermain anak (Indoor)</option>
+                <option value="1">Ruang rontgen yang berdekatan</option>
+                <option value="1">Area membaca films</option>
+                <option value="1">Ruang Perawat</option>
+                <option value="1">Ruang kontrol sinar-X</option>
+                <option value="0.5">Ruang pemeriksaan/perawatan pasien</option>
+                <option value="0.2">Koridor</option>
+                <option value="0.2">Ruang pasien</option>
+                <option value="0.2">Ruang tunggu kariyawan</option>
+                <option value="0.2">Ruang istirahat staf</option>
+                <option value="0.125">Pintu koridor</option>
+                <option value="0.05">Toilet publik</option>
+                <option value="0.05">Area penjual otomatis</option>
+                <option value="0.05">Ruang penyimpanan</option>
+                <option value="0.05">Ruang tunggu tanpa pengawasan</option>
+                <option value="0.025">Tangga</option>
+                <option value="0.025">Area luar pejalan kaki/kendaraan</option>
+                <option value="0.025">Lift tanpa pengawasan</option>
+                <option value="0.025">Loteng</option>
             </select>
         </form>
         
-        <form class="satu">    
-            Targeted Area : 
-            <select>
+        <form class="satu" for="d">    
+            Jarak (m) : 
+            <input id="d"/>
+        </form>
+
+        <form class="satu" for="n">        
+            Jumlah pasien perminggu : 
+            <input id="n">
+        </form>
+
+        <form class="satu" for="p">    
+            Target desain goal (mSv/perminggu) : 
+            <input id="p" >
+        </form>
+
+        <form class="satu" for="bahan">    
+            Material :
+            <select id="bahan">
                 <option>Pilih</option>
-                <option value="option1">Floor</option>
-                <option value="option2">Chest Stand</option>
-                <option value="option3">Chest Room</option>
-                <option value="option4">Flouroskopi</option>
-                <option value="option5">Rad dan Chest Bucky</option>
-            </select>
-        </form>
-
-        <form class="satu">    
-            Distance (m) : 
-            <input/>
-        </form>
-
-        <form class="satu">        
-            Weekly no. of Patients : 
-            <input/>
-        </form>
-
-        <form class="satu">    
-            Target design goal (mSv/week) : 
-            <input/>
-        </form>
-
-        <form class="satu">    
-            Basic Shielding Material :
-            <select>
-                <option>Pilih</option>
-                <option value="option1">Concrete</option>
-                <option value="option2">Lead</option>
-                <option value="option3">Steel</option>
+                <option value="beton">Beton</option>
+                <option value="pb">Timbal</option>
             </select>
         </form>
         
-        <form class="satu">    
-            Other Shielding Materials :
-            <select>
-                <option>Pilih</option>
-                <option value="option1">Plate Glass</option>
-                <option value="option2">Wood</option>
-                <option value="option3">Gypsum</option>
-            </select>
-        </form>
-    </main>
+        
+        <form>
+            <button type="button" onclick="calculate()">HITUNG</button>
+        <div id="result"></div>
+
+        <button type="button1" onclick="calculate()">HITUNG LOKAL</button>
+        <div id="result1"></div>
+        {{Nilai_x}}
+
+    </form>
+        <script>
+            
+            function calculate() {
+                var u = document.getElementById('u');
+                var us = parseFloat(u.options[u.selectedIndex].value);
+                var t = document.getElementById('t');
+                var ts = parseFloat(t.options[t.selectedIndex].value);
+                var p = parseFloat(document.getElementById('p').value);
+                var n = parseFloat(document.getElementById('n').value);
+                var d = parseFloat(document.getElementById('d').value);
+                var modaliti = document.getElementById('modaliti').value;
+                var bahan = document.getElementById('bahan').value;
+                var ac;
+                var ab;
+                var c;
+
+            
+                
+            if (modaliti === "cr") {
+                    if (bahan === "pb") {
+                        c = 1.054;
+                        z = 1.2;
+                        a = 2.288;
+                        be = 9.848;
+
+                    
+            } else {    a = 0.0364;
+                        be = 0.0659;
+                        c = 0.7543;
+                        z = 1.2;
+            }
+            } 
+
+            else if (modaliti === "rad") {
+        
+                    if (bahan === "pb") 
+                    {   a = 2.651;
+                        be = 16.56;
+                        c = 0.4585;
+                        z = 0.034;
+                    }
+                    else 
+                    {   a = 0.03994;
+                        be = 0.1448;
+                        c = 0.4231;
+                        z = 0.034; }
+            }
+            else if (modaliti === "radb") {
+                if (bahan === "pb") {
+                        c = 0.56;
+                        z = 4.9;
+                        a = 2.264;
+                        be = 13.08;
+
+                    
+            } else {    a = 0.03552;
+                        be = 0.1177;
+                        c = 0.6007;
+                        z = 4.9;
+            }
+            }
+
+            if (bahan === "pb")
+                {var xe = (1 / (a * c)) * (Math.log(((Math.pow(((n * us * ts * z) / (p * d * d)), c)) + (be / a)) / (1 + (be / a))));
+            
+                document.getElementById('result').innerText = "Ketebalan perisai yang direkomendasikan: " + xe.toFixed(2) + " mm Timbal (pb)";
+                }
+            else {var xe = (1 / (a * c)) * (Math.log(((Math.pow(((n * us * ts * z) / (p * d * d)), c)) + (be / a)) / (1 + (be / a))));
+            
+            document.getElementById('result').innerText = "Ketebalan perisai yang direkomendasikan: " + xe.toFixed(2) + " mm Beton";
+            }
+            }
+        </script>
 
     <footer>
         <p>Departemen Fisika Fakultas Matematika dan Ilmu Pengetahuan Alam, Universitas Indonesia, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424</p>
     </footer>
-
+</main>
     
 </body>
 </html>
