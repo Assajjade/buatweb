@@ -20,6 +20,18 @@
         </nav>
 
     <main class="text1">
-
+        <form method="POST" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Nilai B: </td>
+                    <td><input type="text" name="masukan" placeholder="Nilai B" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="btn login_btn" type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
         {{Nilai_x}}
     </main>
