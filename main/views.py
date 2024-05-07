@@ -89,6 +89,3 @@ def form(request):
     
         
     return render(request, "Lokal.html", context)
-
-
-
